@@ -1,0 +1,17 @@
+corpus:
+  cmd: python -m spacy run corpus
+  script:
+    - python scripts/partition.py assets/aij-wikiner-en-wp2.bz2 assets/iob
+    - python -m spacy convert assets/iob corpus --n-sents 10
+  deps:
+    - path: assets/aij-wikiner-en-wp2.bz2
+      md5: f324f982e29400549d33f5888739f26a
+  outs:
+    - path: corpus/train.spacy
+      md5: c1750821003dabd326a149ab5c1a21eb
+    - path: corpus/dev.spacy
+      md5: 6f48cb46baf631bfc4582881286e1a2b
+    - path: corpus/test.spacy
+      md5: 3b4c86048c51baf6346f255cc7dec4b6
+  spacy_version: 3.2.1
+  spacy_git_version: 800737b41

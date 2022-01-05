@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "tutorial_spacy_custom_span_getter"
+version = "0.1.0"
+description = "Example on how one can create a custom span getter"
+authors = ["Max Ermakov <maksim_ermakov@protonmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+spacy = "^3.2.1"
+spacy-transformers = "^1.1.3"
+torch = {extras = ["cpu"], version = "^1.10.1"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
